@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driven Eats</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+      <div class="header-title">
+        <h1>DrivenEats</h1>
+        <p>Sua comida em 6 minutos</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="container-opcoes-comidas">
+        <div class="opcoes-title">
+          Primeiro, seu prato
+        </div>
+
+        <div class="card-container">
+          <div onclick="selectComida(this)" class="card">
+            <img src="./imagens/pf_frango.jpg" alt="pf_frango">
+            <div class="card-text">
+              <h3>Frango Grelhado</h3>
+              <p>Arroz, feijão, farofa, ovo, batata e salada</p>
+              <p class="valor">20,90</p>
+            </div>
+            </div>
+            <div onclick="selectComida(this)" class="card">
+              <img src="./imagens/pf_carne.jpg" alt="pf_carne">
+              <div class="card-text">
+                <h3>Bife de boi</h3>
+                <p>Arroz, feijão, farofa, ovo, batata e salada</p>
+                <p class="valor">22,90</p>
+              </div>
+            </div>
+
+            <div onclick="selectComida(this)" class="card">
+              <img src="./imagens/pf_calabresa.png" alt="pf_calabresa">
+              <div class="card-text">
+                <h3>Linguiça Calabresa</h3>
+                <p>Arroz, feijão e batata</p>
+                <p class="valor">18,90</p>
+              </div>
+              </div>        
+        </div>
+      </div>
+
+      <div class="container-opcoes-bebidas">
+        <div class="opcoes-title">
+          Agora sua bebida
+        </div>
+
+        <div class="card-container">
+          <div onclick="selectBebida(this)" class="card">
+            <img src="./imagens/coca.png" alt="coca">
+            <div class="card-text">
+              <h3>Coca-cola</h3>
+              <p>Lata 350 ml</p>
+              <p class="valor">4,90</p>
+            </div>
+            </div>
+            <div onclick="selectBebida(this)" class="card">
+              <img src="./imagens/fanta.png" alt="fanta">
+              <div class="card-text">
+                <h3>Fanta laranja</h3>
+                <p>Lata 350 ml</p>
+                <p class="valor">4,90</p>
+              </div>
+            </div>
+
+            <div onclick="selectBebida(this)" class="card">
+              <img src="./imagens/suco.png" alt="suco">
+              <div class="card-text">
+                <h3>Suco de laranja</h3>
+                <p>Garrafinha de 290 ml</p>
+                <p class="valor"> 3,50</p>
+              </div>
+              </div>        
+        </div>
+      </div>
+
+
+      <div class="container-opcoes-sobremesa">
+        <div class="opcoes-title">
+          Por fim, sua sobremesa
+        </div>
+
+        <div class="card-container">
+          <div onclick="selectSobremesa(this)" class="card">
+            <img src="./imagens/pudim.jpg" alt="pudim">
+            <div class="card-text">
+              <h3>Pudim</h3>
+              <p>Pudim de leite condensado</p>
+              <p class="valor">10,90</p>
+            </div>
+            </div>
+            <div onclick="selectSobremesa(this)" class="card">
+              <img src="./imagens/brownie.jpg" alt="brownie">
+              <div class="card-text">
+                <h3>Brownie</h3>
+                <p>Brownie com gotas de chocolate</p>
+                <p class="valor">11,90</p>
+              </div>
+            </div>
+
+            <div onclick="selectSobremesa(this)" class="card">
+              <img src="./imagens/mouse.jpg" alt="mouse">
+              <div class="card-text">
+                <h3>Mousse</h3>
+                <p>Muosse de maracujá</p>
+                <p class="valor">8,90</p>
+              </div>
+              </div>        
+        </div>
+      </div> 
+      </div>
+
+      <div class="container-final">
+          <button onclick="finalizarPedido()" class="container-button">
+            <p>Selecione os 3 itens para fechar o pedido</p>
+          </button>
+          
+          <div class="modal hidden">
+            <div class="container-pedido">
+              <div class="container-check">
+                <h3>Confirme seu pedido</h3>
+                <p class="comidaClass">Comida selecionada + valor</p>
+                <p class="bebidaClass">Bebida selecionada + valor</p>
+                <p class="sobremesaClass">Sobremesa selecionada + valor</p>
+                <p class="total">Valor total do pedido</p>
+                <div class="check-link">
+                  <a id="whatsappLink" class="mensagem" aria-label="Luanderson Restaurant" href="#" onclick="mensagem()">Tudo certo, pode pedir!</a>
+                </div>
+                <button onclick="fecharModal()" class="button-modal">Cancelar</button>    
+              </div>
+            </div>
+          </div>
+      </div>
+          
+
+      <script src="script.js"></script>
+
+    </body>
+</html>
